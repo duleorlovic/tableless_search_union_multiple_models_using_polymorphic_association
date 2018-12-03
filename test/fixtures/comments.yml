@@ -1,13 +1,9 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+milenko_comment_post:
+  body: I think the same about the kayak
+  user: milenko_zoric
+  commentable: all_about_kayaking (Post)
 
-one:
-  body: MyString
-  user: one
-  commentable: one
-  commentable_type: Commentable
-
-two:
-  body: MyString
-  user: two
-  commentable: two
-  commentable_type: Commentable
+milenko_comment_book:
+  body: My favourite book
+  user: milenko_zoric
+  commentable: kayak_in_becej (Book)

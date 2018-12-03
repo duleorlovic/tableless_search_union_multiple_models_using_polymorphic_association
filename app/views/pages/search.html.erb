@@ -1,18 +1,28 @@
-<h1>Search Results <%= @search.params %></h1>
-<%= form_for @search, url: search_path, method: :get do |f| %>
-  <%= f.search_field :s, autofocus: true, onfocus: 'this.selectionStart = this.selectionEnd = this.value.length;' %>
-<% end %>
-<ul>
-  <% @search.results.each do |result| %>
-    <li>
-      <% case result %>
-      <% when Book %>
-        Book <%= result.title %>
-      <% when User %>
-        User <%= result.name %>
-      <% when Comment %>
-        Comment <%= result.body %>
-      <% end %>
-    </li>
+<h1>Search Results</h1>
+<p>
+  for Book, User, Post or Comment containing <b><%= params[:s] %></b>
+  <%= form_tag search_path, method: :get, id: 'search-form' do %>
+    <%= search_field_tag :s, params[:s], autofocus: true, onfocus: 'this.selectionStart = this.selectionEnd = this.value.length;' %>
+    <%= select_tag :sort_by, options_for_select(PagesController::SORT_BY_OPTIONS.invert, selected: params[:sort_by]), onchange: 'document.getElementById("search-form").submit()' %>
   <% end %>
-</ul>
+</p>
+<div>
+  <% @search_result.each do |result| %>
+    <% searchable = result.searchable %>
+    <fieldset>
+      <% case searchable when Book %>
+        <legend>Book <small><%= searchable.created_at.to_s :short %></small></legend>
+        <%= searchable.title %>
+      <% when User %>
+        <legend>User <small><%= searchable.created_at.to_s :short %></small></legend>
+        <%= searchable.name %>
+      <% when Post %>
+        <legend>Post <small><%= searchable.created_at.to_s :short %></small></legend>
+        <%= searchable.title %>
+      <% when Comment %>
+        <legend>Comment <small><%= searchable.created_at.to_s :short %></small></legend>
+        <%= searchable.body %>
+      <% end %>
+    </fieldset>
+  <% end %>
+</div>

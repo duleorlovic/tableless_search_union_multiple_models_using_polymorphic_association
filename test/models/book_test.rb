@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class BookTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test 'valid fixture' do
+    assert books.map(&:valid?).all?
+  end
 end

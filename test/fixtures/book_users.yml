@@ -1,9 +1,7 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+water_sports_marko_tomicevic:
+  book: water_sports
+  user: marko_tomicevic
 
-one:
-  book: one
-  user: one
-
-two:
-  book: two
-  user: two
+water_sports_milenko_zoric:
+  book: water_sports
+  user: milenko_zoric

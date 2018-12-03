@@ -1,11 +1,9 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+all_about_kayaking:
+  title: All about kayaking and it's impact on me
+  body: Life starts where lands' end.
+  user: marko_tomicevic
 
-one:
-  title: MyString
-  body: MyText
-  user: one
-
-two:
-  title: MyString
-  body: MyText
-  user: two
+how_i_start_tennis:
+  title: How I start
+  body: Tennis is my love
+  user: novak_djokovic

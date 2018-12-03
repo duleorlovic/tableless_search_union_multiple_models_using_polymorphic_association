@@ -1,9 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+marko_tomicevic:
+  name: Marko Tomicevic
 
-one:
-  name: MyString
-  email: MyString
+milenko_zoric:
+  name: Milenko Zoric
 
-two:
-  name: MyString
-  email: MyString
+novak_djokovic:
+  name: Novak Djokovic
+
+nikola_tesla:
+  name: Nikola Tesla

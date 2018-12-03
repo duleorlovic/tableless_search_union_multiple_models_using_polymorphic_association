@@ -1,11 +1,12 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+water_sports:
+  title: Water sports
+  pdf_download_url: water@book.com
 
-one:
-  title: MyString
-  pdf_download_url: MyString
-  created_by: one
+kayak_in_becej:
+  title: Kayak in Becej
+  created_by: marko_tomicevic
 
-two:
-  title: MyString
-  pdf_download_url: MyString
-  created_by: two
+from_idea_to_realization:
+  title: You need patents to fund next ideas
+  pdf_download_url: idea@books.com
+  created_by: nikola_tesla
