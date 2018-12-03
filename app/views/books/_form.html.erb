@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :created_by_id %>
-    <%= form.text_field :created_by_id %>
+    <%= form.select :created_by_id, options_from_collection_for_select(User.all, :id, :name, form.object.created_by_id) %>
   </div>
 
   <div class="actions">

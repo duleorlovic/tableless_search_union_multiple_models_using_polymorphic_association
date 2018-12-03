@@ -1,0 +1,18 @@
+<h1>Search Results <%= @search.params %></h1>
+<%= form_for @search, url: search_path, method: :get do |f| %>
+  <%= f.search_field :s, autofocus: true, onfocus: 'this.selectionStart = this.selectionEnd = this.value.length;' %>
+<% end %>
+<ul>
+  <% @search.results.each do |result| %>
+    <li>
+      <% case result %>
+      <% when Book %>
+        Book <%= result.title %>
+      <% when User %>
+        User <%= result.name %>
+      <% when Comment %>
+        Comment <%= result.body %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,4 @@
+<h1>Search Users, Books and Comments</h1>
+<%= form_for @search, url: search_path, method: :get do |f| %>
+  <%= f.search_field :s, autofocus: true %>
+<% end %>
